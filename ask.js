@@ -1,4 +1,4 @@
-(function(){function srtTimeToSeconds(time) {
+function srtTimeToSeconds(time) {
   var match = time.match(/(\d\d):(\d\d):(\d\d),(\d\d\d)/);
   var hours        = +match[1],
       minutes      = +match[2],
@@ -50,4 +50,4 @@ function askSubtitles() {
 	});
 }
 
-window.askSubtitles = askSubtitles;})();
+window.askSubtitles = askSubtitles;
