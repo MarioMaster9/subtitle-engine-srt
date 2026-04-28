@@ -1,6 +1,6 @@
-let videoTag = document.getElementsByTagName("video")[0];
+let videoTag = document.getElementsByTagName('play-av')[0].shadowRoot.querySelector("video");
 
-document.getElementById("subtitleDiv").innerHTML = `<style>
+document.getElementsByTagName('play-av')[0].shadowRoot.querySelector("#subtitleDiv").innerHTML = `<style>
 .subContainer {
 	font-family: Arial, Helvetica, sans-serif;
 }
