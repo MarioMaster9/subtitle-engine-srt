@@ -1,4 +1,4 @@
-function srtTimeToSeconds(time) {
+(function(){function srtTimeToSeconds(time) {
   var match = time.match(/(\d\d):(\d\d):(\d\d),(\d\d\d)/);
   var hours        = +match[1],
       minutes      = +match[2],
@@ -22,7 +22,7 @@ function parseSrt(srt) {
   var lines = srt.replaceAll('\r', '').split(/(?:^|\n\n)\d+\n|\n+$/g).slice(1);
   return lines.map(parseSrtLine);
 }
-const controls = document.getElementsByClassName("jw-controls")[0];
+const controls = document.getElementsByTagName('play-av')[0].shadowRoot.querySelectorAll(".jw-controls")[0];
 const subtitleDiv = document.createElement("div");
 subtitleDiv.id = "subtitleDiv"
 subtitleDiv.style.marginTop = "-0em";
@@ -50,4 +50,4 @@ function askSubtitles() {
 	});
 }
 
-window.askSubtitles = askSubtitles;
+window.askSubtitles = askSubtitles;})();
